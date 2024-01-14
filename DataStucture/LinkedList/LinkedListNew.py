@@ -4,12 +4,7 @@ class Node:
         self.next = None
 
 class LinkedList:
-    # def __init__(self, value):
-    #     new_node = Node(value)
-    #     self.head = new_node
-    #     self.tail = new_node
-    #     self.length = 1
-    
+
     def __init__(self):
         self.head = None
         self.tail = None
@@ -66,15 +61,7 @@ class LinkedList:
         while current is not None:
             print(current.value)
             current = current.next
-    
-    def search(self, target):
-        current = self.head
-        while current is not None:
-            if current.value == target:
-                return True
-            current = current.next
-        return False
-    
+        
     def search(self, target):
         current = self.head
         index = 0
@@ -95,7 +82,7 @@ class LinkedList:
             current = current.next
         return current
     
-    def set_value(self, index, value):
+    def Update(self, index, value):
         temp = self.get(index)
         if temp:
             temp.value = value
@@ -147,23 +134,19 @@ class LinkedList:
         self.length -= 1
         return popped_node
     
-
-    def remove(self, index):
-        prev_node = self.get(index-1)
-        popped_node = prev_node.next
-        prev_node.next = popped_node.next
-        popped_node.next = None
-        self.length -= 1
-        return popped_node
-
+    def clear(self):
+        self.head = None
+        self.tail = None
+        print("Done...")
 
 
 
 linked_list = LinkedList()
-linked_list.append(10)
-linked_list.append(20)
-linked_list.append(30)
-linked_list.append(40)
-print(linked_list)
-print(linked_list.remove(0))
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# linked_list.append(40)
+linked_list.clear()
+# print(linked_list)
+# print(linked_list.remove(0))
 print(linked_list)
