@@ -42,7 +42,10 @@ class LinkedList:
     
     def insert(self, index, value):
         new_node = Node(value)
-        if self.head is None:
+        if index < 0 or index > self.length:
+            print("Index out of range")
+            return False
+        elif self.head is None:
             self.head = new_node
             self.tail = new_node
         elif index == 0:
@@ -142,11 +145,12 @@ class LinkedList:
 
 
 linked_list = LinkedList()
-# linked_list.append(10)
-# linked_list.append(20)
-# linked_list.append(30)
-# linked_list.append(40)
-linked_list.clear()
+linked_list.append(10)
+linked_list.append(20)
+linked_list.append(30)
+linked_list.append(40)
+# linked_list.clear()
 # print(linked_list)
+linked_list.insert(30,50)
 # print(linked_list.remove(0))
 print(linked_list)
