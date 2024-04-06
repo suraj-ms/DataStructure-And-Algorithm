@@ -1,6 +1,3 @@
-#   Created by Elshad Karimov on 29/05/2020.
-#   Copyright © 2020 AppMillers. All rights reserved.
-
 class Queue:
     def __init__(self):
         self.items = []

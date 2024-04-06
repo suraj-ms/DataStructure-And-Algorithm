@@ -1,6 +1,3 @@
-#   Created by Elshad Karimov on 31/05/2020.
-#   Copyright © 2020 AppMillers. All rights reserved.
-
 import queue as q
 
 customQueue = q.Queue(maxsize=3)

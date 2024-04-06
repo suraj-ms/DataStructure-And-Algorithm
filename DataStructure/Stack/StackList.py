@@ -1,7 +1,3 @@
-#   Created by Elshad Karimov on 22/05/2020.
-#   Copyright © 2020 AppMillers. All rights reserved.
-
-    
 class Stack:
     def __init__(self):
         self.list = []
